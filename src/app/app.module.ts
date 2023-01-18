@@ -12,13 +12,15 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { LoginComponent } from './components/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 
+import { ShopComponent } from './components/shop/shop.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    NavbarComponent
+    NavbarComponent,
     LoginComponent,
+    ShopComponent
   ],
   imports: [
     BrowserModule,
