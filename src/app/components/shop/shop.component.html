@@ -1,0 +1,30 @@
+<div class="shop">
+  <div class="shop_side-nav">
+    <h3>Nav Bar</h3>
+  </div>
+</div>
+
+<div class="flex-container">
+  <div class="collection">
+    <div *ngFor="let nft of nfts">
+      <div class="flip-card">
+        <div class="flip-card-inner">
+          <div class="flip-card-front">
+            <img
+              src="{{ nft.img }}"
+              alt="Avatar"
+              style="width: 300px; height: 300px"
+            />
+          </div>
+          <div class="flip-card-back">
+            <h1>{{ nft.name }}</h1>
+            <p>{{ nft.description }}</p>
+            <p>{{ nft.price }}</p>
+            <button>Buy Now</button>
+            <button>Favorite</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
