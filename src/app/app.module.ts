@@ -10,6 +10,8 @@ import { LoginComponent } from './components/login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ShopComponent } from './components/shop/shop.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { FooterComponent } from './components/footer/footer.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     HomeComponent,
     NavbarComponent,
     LoginComponent,
-    ShopComponent
+    ShopComponent,
+    FooterComponent,
+    CheckoutComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,6 +32,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatToolbarModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
