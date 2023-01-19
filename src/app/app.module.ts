@@ -12,6 +12,8 @@ import { ShopComponent } from './components/shop/shop.component';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { FooterComponent } from './components/footer/footer.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
+import { ModalComponent } from './components/modal/modal.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -22,6 +24,8 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
     ShopComponent,
     FooterComponent,
     CheckoutComponent,
+    ModalComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -30,8 +34,9 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
     MatButtonModule,
     HttpClientModule,
     MatToolbarModule,
+    MatDialogModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }
