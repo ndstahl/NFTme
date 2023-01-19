@@ -1,0 +1,30 @@
+version: "3.6"
+
+services:
+  tweeterdb:
+    image: postgres
+    container_name: nftme-db
+    env_file:
+      - .env
+    expose:
+      - 4200
+      - 5432
+      - 3001
+      - 5400
+    ports:
+      - "5400:5432"
+    environment:
+      - POSTGRES_USER=${USER}
+      - POSTGRES_PASSWORD=${PASS}
+      - PGUSER=${USER}
+    volumes:
+       - ./nftme.sql:/docker-entrypoint-initdb.d/schema.sql
+    restart: always
+    healthcheck:
+      test: ["CMD-SHELL","pg_isready -U ${USER}"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+networks:
+  default:
+    driver: bridge
