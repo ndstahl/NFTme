@@ -1,7 +1,8 @@
 version: "3.6"
+version: "3.6"
 
 services:
-  tweeterdb:
+  nftme:
     image: postgres
     container_name: nftme-db
     env_file:
