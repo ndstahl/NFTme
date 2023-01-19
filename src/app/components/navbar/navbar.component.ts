@@ -6,5 +6,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./navbar.component.scss']
 })
 export class NavbarComponent {
+  public navbarLinks = [
+    {
+      name: 'Shop',
+      route: '/login/shop'
+    },
+    {
+      name: 'Checkout',
+      route: '/login/checkout'
+    }
+  ];
 
 }

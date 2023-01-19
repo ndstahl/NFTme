@@ -2,19 +2,31 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './components/home/home.component';
 import { LoginComponent } from './components/login/login.component';
-import { FooterComponent } from './components/footer/footer.component';
-
+import { ShopComponent } from './components/shop/shop.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
 const routes: Routes = [
   {
     path: '',
     component: LoginComponent,
   },
   {
-    path: 'footer',
-    component: FooterComponent,
+    path: 'shop',
+    component: ShopComponent,
   },
-  { path: '**', redirectTo: '', pathMatch: 'full' },
-  { path: '', redirectTo: '/', pathMatch: 'full' },
+  {
+    path: 'checkout',
+    component: CheckoutComponent,
+  },
+  {
+    path: '**',
+    redirectTo: '/login',
+    pathMatch: 'full',
+  },
+  {
+    path: ' ',
+    redirectTo: '/login',
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({
