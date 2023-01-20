@@ -4,7 +4,35 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.login_container {
+    width: 40em;
+    height: 40em;
     display: flex;
+    // position: relative;
+    z-index: 3;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1em;
+}
+
+.login_container_image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    
+}
+
+.login_container_background_img {
+    width: 50em;
+    height: 40em;
+    z-index: 2;
+    border-radius: 1em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .login_page_background_img {
@@ -17,66 +45,18 @@
     z-index: 1;
 }
 
-
-.login_container {
-    width: 40em;
-    height: 40em;
-    display: flex;
-    position: relative;
-    z-index: 3;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 1em;
-}
-
-.login_container_form {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1em;
-    width: 40em;
-    height: 30em;
-    z-index: 2;
-    background-color: grey;
-    opacity: .9;
-    border-radius: 1em;
-
-}
-
-
-.login_container_background_img {
-    width: 50em;
-    height: 40em;
-    z-index: 2;
-    border-radius: 1em;
-}
-
 button {
     background-color: lightgrey;
     border: 1px black solid;
     border-radius: 1em;
     width: 11em;
     font-size: large;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+
 }
 
 button:hover {
     cursor: pointer;
-}
-
-input {
-    border: none;
-    border-radius: 1em;
-    height: 1.5em;
-}
-
-.nftme_logo_img {
-    width: 30em;
-}
-
-h1 {
-    display: flex;
-    justify-content: center;
 }

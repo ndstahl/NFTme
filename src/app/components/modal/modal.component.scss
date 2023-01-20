@@ -1,0 +1,32 @@
+.login_container_form {
+    display: flex;
+    flex-direction: column;
+    width: 35em;
+    height: 30em;
+    border-radius: 2em;
+    justify-content: center;
+    align-items: center;
+    gap: .5em
+}
+
+img {
+    size: 10em;
+}
+
+.login_form_webpage_name {
+    display: flex;
+    font-size: 20px;
+}
+
+.login_fields {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
