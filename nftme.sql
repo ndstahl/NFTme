@@ -17,7 +17,7 @@ INSERT INTO
 VALUES
   ('https://mpb-site.s3.us-east-2.amazonaws.com/imgs/winter-22/ar1.png','DesireInspire','A collection dedicated to the young black queens','art'),
   ('https://mpb-site.s3.us-east-2.amazonaws.com/imgs/winter-22/ar2.jpg','WeBloom','A flower untouched will bloom','art'),
-  ('https://mpb-site.s3.us-east-2.amazonaws.com/imgs/winter-22/ar3.jpg','MoonMunchies','If you are a McDonalds lover', 'this one is for you.','art'),
+  ('https://mpb-site.s3.us-east-2.amazonaws.com/imgs/winter-22/ar3.jpg','MoonMunchies','If you are a McDonalds loverthis one is for you.','art'),
   ('https://mpb-site.s3.us-east-2.amazonaws.com/imgs/winter-22/a1.png','SilverPawKing','4 cats of royality survives after world desruction determined to rebuild their empire','animals'),
   ('https://mpb-site.s3.us-east-2.amazonaws.com/imgs/winter-22/a2.png','GoldPawQueen4','4 cats of royality survives after world desruction determined to rebuild their empire' ,'animals'),
   ('https://mpb-site.s3.us-east-2.amazonaws.com/imgs/winter-22/a3.jpg','GoldenTinyPaw','4 cats of royality survives after world desruction determined to rebuild their empire' ,'animals'),
