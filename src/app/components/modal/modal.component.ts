@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { MatDialogModule } from '@angular/material/dialog';
+import { Component, Inject } from '@angular/core';
+import { MatDialogModule, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 
 
 export interface DialogData {
@@ -20,7 +20,13 @@ export class ModalComponent {
   public animal = "";
   public name = "";
 
-  constructor(public dialog: MatDialogModule) { }
+  constructor(
+    public dialogRef: MatDialogRef<ModalComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: DialogData) { }
+
+  close(): void {
+    this.dialogRef.close();
+  }
 
   // openDialog(): void {
   //   const dialogRef = this.dialog.open( {
@@ -28,10 +34,7 @@ export class ModalComponent {
   //     data: { name: this.name, animal: this.animal }
   //   });
 
-  //   dialogRef.afterClosed().subscribe(result => {
-  //     console.log('The dialog was closed');
-  //     this.animal = result;
-  //   });
+  //   
   // }
 
 }
