@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NftMeService } from 'src/app/services/nft-me.service';
 
 @Component({
   selector: 'app-shop',
@@ -6,31 +7,19 @@ import { Component } from '@angular/core';
   styleUrls: ['./shop.component.scss']
 })
 export class ShopComponent {
+
+  public nfts: any[] = [];
   
-  public nfts:Array<any> = [
-    {img: "../../../assets/nfts/Image 1-17-23 at 6.26 PM.jpg", name: "Name", description: "Description", price: "Price"},
-    {img: ".../../../assets/nfts/Image 1-17-23 at 6.25 PM.jpg", name: "Name", description: "Description", price: "Price"},
-    {img: "../../../assets/nfts/Image 1-17-23 at 6.26 PM.jpg", name: "Name", description: "Description", price: "Price"},
-    {img: ".../../../assets/nfts/Image 1-17-23 at 6.25 PM.jpg", name: "Name", description: "Description", price: "Price"},
-    {img: "../../../assets/nfts/Image 1-17-23 at 6.26 PM.jpg", name: "Name", description: "Description", price: "Price"},
-    {img: ".../../../assets/nfts/Image 1-17-23 at 6.25 PM.jpg", name: "Name", description: "Description", price: "Price"},
-    {img: "../../../assets/nfts/Image 1-17-23 at 6.26 PM.jpg", name: "Name", description: "Description", price: "Price"},
-    {img: ".../../../assets/nfts/Image 1-17-23 at 6.25 PM.jpg", name: "Name", description: "Description", price: "Price"},
-    {img: ".../../../assets/nfts/Image 1-17-23 at 6.25 PM.jpg", name: "Name", description: "Description", price: "Price"},
-    {img: "../../../assets/nfts/Image 1-17-23 at 6.26 PM.jpg", name: "Name", description: "Description", price: "Price"},
-    {img: ".../../../assets/nfts/Image 1-17-23 at 6.25 PM.jpg", name: "Name", description: "Description", price: "Price"},
-    {img: "../../../assets/nfts/Image 1-17-23 at 6.26 PM.jpg", name: "Name", description: "Description", price: "Price"},
-    {img: ".../../../assets/nfts/Image 1-17-23 at 6.25 PM.jpg", name: "Name", description: "Description", price: "Price"},
-    {img: ".../../../assets/nfts/Image 1-17-23 at 6.25 PM.jpg", name: "Name", description: "Description", price: "Price"},
-    {img: "../../../assets/nfts/Image 1-17-23 at 6.26 PM.jpg", name: "Name", description: "Description", price: "Price"},
-    {img: ".../../../assets/nfts/Image 1-17-23 at 6.25 PM.jpg", name: "Name", description: "Description", price: "Price"},
-    {img: "../../../assets/nfts/Image 1-17-23 at 6.26 PM.jpg", name: "Name", description: "Description", price: "Price"},
-    {img: ".../../../assets/nfts/Image 1-17-23 at 6.25 PM.jpg", name: "Name", description: "Description", price: "Price"},
-    {img: ".../../../assets/nfts/Image 1-17-23 at 6.25 PM.jpg", name: "Name", description: "Description", price: "Price"},
-    {img: "../../../assets/nfts/Image 1-17-23 at 6.26 PM.jpg", name: "Name", description: "Description", price: "Price"},
-    {img: "../../../assets/nfts/Image 1-17-23 at 6.26 PM.jpg", name: "Name", description: "Description", price: "Price"},
-    {img: ".../../../assets/nfts/Image 1-17-23 at 6.25 PM.jpg", name: "Name", description: "Description", price: "Price"},
-    {img: "../../../assets/nfts/Image 1-17-23 at 6.26 PM.jpg", name: "Name", description: "Description", price: "Price"},
-    {img: ".../../../assets/nfts/Image 1-17-23 at 6.25 PM.jpg", name: "Name", description: "Description", price: "Price"},
-  ]
+  constructor(private nftMeService: NftMeService) {}
+
+  ngOnInit(): void {
+
+    this.nftMeService.getNftData().subscribe((res:any) => {
+      console.log('DATA' , res.data);
+      this.nfts = res.data;
+      this.nftMeService.$nftMeData.next({
+        nfts: res.data,
+      });
+    });
+  }
 }

@@ -9,17 +9,23 @@ import { ModalComponent } from '../modal/modal.component';
 })
 export class CheckoutComponent {
 
-  public price = "";
-  public description = "";
-  public name = "";
-  public id = "";
-  public image = "";
+
+  public nfts: any[] =[];
 
   public isCheckout = true
   constructor(private nftMeService: NftMeService, private dialog: MatDialog) { }
 
+
+
   ngOnInit(): void {
 
+    this.nftMeService.getNftData().subscribe((res:any) => {
+      console.log('DATA' , res.data);
+      this.nfts = res.data;
+      this.nftMeService.$nftMeData.next({
+        nfts: res.data,
+      });
+    });
   }
    public openModal(): void {
     const dialogRef = this.dialog.open(ModalComponent, {

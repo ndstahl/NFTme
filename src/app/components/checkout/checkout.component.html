@@ -9,36 +9,25 @@
       </mat-card-header>
 
       <mat-card-content>
-        <div class="product-card">
+        <div class="product-card" *ngFor="let nft of nfts">
           <div class="card">
             <div class="img-box">
-              <img src="../../../assets/nfts/Image 1-17-23 at 6.25 PM.jpg" alt="NFT1" width="80px"
-                class="product-img" />
+              <img
+                src="{{nft.nftimg}}"
+                alt="NFT1"
+                width="80px"
+                class="product-img"
+              />
             </div>
             <div class="detail">
-              <h4 class="product-name">Description: Colorful NFT</h4>
+              <h3 class="product-name">{{nft.title}}</h3>
+              <h4>{{nft.category}}</h4>
+              <p>{{nft.info}}</p>
               <div class="wrapper">
-                <div class="price">$ <span id="price">1.25</span></div>
+
+                <div class="price">$ <span id="price">{{nft.price}}</span></div>
               </div>
             </div>
-            <button class="product-close-btn"></button>
-          </div>
-        </div>
-        <div class="product-card">
-          <div class="card">
-            <div class="img-box">
-              <img src="../../../assets/nfts/Image 1-17-23 at 6.26 PM.jpg" alt="NFT2" width="80px"
-                class="product-img" />
-            </div>
-
-            <div class="detail">
-              <h4 class="product-name">Description: Neon Color NFT</h4>
-
-              <div class="wrapper">
-                <div class="price">$ <span id="price">0.80</span></div>
-              </div>
-            </div>
-
             <button class="product-close-btn"></button>
           </div>
         </div>

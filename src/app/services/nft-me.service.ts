@@ -10,6 +10,16 @@ export class NftMeService {
 
   constructor(private httpClient: HttpClient) { }
 
+  getNftData(): Observable<any>{
+    return this.httpClient.get(
+      '/api/nfts');
+  }
+
+  getUserData(): Observable<any>{
+    return this.httpClient.get(
+      '/api/users');
+  }
+
   getLoginData(): Observable<any>{
     return this.httpClient.get(
       '/api/login');
