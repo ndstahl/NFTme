@@ -7,3 +7,37 @@ body { margin: 0; padding:0; font-family: Roboto, "Helvetica Neue", sans-serif; 
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+  background-position: center;
+  background-attachment: fixed;
+  background-image: linear-gradient(
+    to right top,
+    #FA6E1A,
+    #FF5E62,
+    #FF659C,
+    #E77BCA,
+    #BC92E4,
+    #A489CF,
+    #8E7FBA,
+    #7B75A3,
+    #665473,
+    #4A3748,
+    #291E24,
+    #000000
+  );
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
