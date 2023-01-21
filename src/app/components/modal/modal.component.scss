@@ -30,3 +30,20 @@ button {
     justify-content: center;
     cursor: pointer;
 }
+
+.checkout_form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 40em;
+    height: 20em;
+    border-radius: none;
+    margin-left: 1em;
+    margin-right: 1em;
+}
+
+
+a:visited, a:hover, a:focus {
+    text-decoration: none;
+    color: #0000EE;
+}

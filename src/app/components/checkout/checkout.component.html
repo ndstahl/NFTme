@@ -12,17 +12,12 @@
         <div class="product-card">
           <div class="card">
             <div class="img-box">
-              <img
-                src="../../../assets/nfts/Image 1-17-23 at 6.25 PM.jpg"
-                alt="NFT1"
-                width="80px"
-                class="product-img"
-              />
+              <img src="../../../assets/nfts/Image 1-17-23 at 6.25 PM.jpg" alt="NFT1" width="80px"
+                class="product-img" />
             </div>
             <div class="detail">
               <h4 class="product-name">Description: Colorful NFT</h4>
               <div class="wrapper">
-
                 <div class="price">$ <span id="price">1.25</span></div>
               </div>
             </div>
@@ -32,20 +27,14 @@
         <div class="product-card">
           <div class="card">
             <div class="img-box">
-              <img
-                src="../../../assets/nfts/Image 1-17-23 at 6.26 PM.jpg"
-                alt="NFT2"
-                width="80px"
-                class="product-img"
-              />
+              <img src="../../../assets/nfts/Image 1-17-23 at 6.26 PM.jpg" alt="NFT2" width="80px"
+                class="product-img" />
             </div>
 
             <div class="detail">
               <h4 class="product-name">Description: Neon Color NFT</h4>
 
               <div class="wrapper">
-                
-
                 <div class="price">$ <span id="price">0.80</span></div>
               </div>
             </div>
@@ -65,7 +54,6 @@
               <span>Tax</span> <span>$ <span id="tax">0.10</span></span>
             </div>
 
-           
             <div class="total">
               <span>Total</span> <span>$ <span id="total">2.15</span></span>
             </div>
@@ -82,14 +70,9 @@
       </mat-card-header>
       <mat-card-actions class="mdc-card_actions">
         <button mat-button>Sign In to Crypto Wallet</button>
-        <button class="coinbase_Logo">
+        <button (click)="openModal()" class="coinbase_Logo">
           <div>
-            <img
-              alt=""
-              height="30px"
-              src="https://static.opensea.io/logos/walletlink-alternative.png"
-              size="24"
-            />
+            <img alt="" height="30px" src="https://static.opensea.io/logos/walletlink-alternative.png" size="24" />
           </div>
           <div>
             <span font-weight="700" font-size="14px">Coinbase Wallet</span>
@@ -97,12 +80,7 @@
         </button>
         <button class="coinbase_Logo">
           <div>
-            <img
-              alt=""
-              height="30px"
-              src="https://static.opensea.io/logos/walletconnect-alternative.png"
-              size="24"
-            />
+            <img alt="" height="30px" src="https://static.opensea.io/logos/walletconnect-alternative.png" size="24" />
           </div>
           <div>
             <span font-weight="700" font-size="14px">MetaMask</span>
@@ -110,82 +88,13 @@
         </button>
         <button class="coinbase_Logo">
           <div>
-            <img
-              alt=""
-              height="30px"
-              src="../../../assets/images/bitkeepicon.png"
-              size="24"
-            />
+            <img alt="" height="30px" src="../../../assets/images/bitkeepicon.png" size="24" />
           </div>
           <div>
             <span font-weight="700" font-size="14px">BitKeep</span>
           </div>
         </button>
       </mat-card-actions>
-      <!-- <mat-card-content>
-      <form action="#">
-        <div class="cardholder-name">
-          <label for="cardholder-name" class="label-default"
-            >Cardholder name</label
-          >
-          <input
-            type="text"
-            name="cardholder-name"
-            id="cardholder-name"
-            class="input-default"
-          />
-        </div>
-
-        <div class="card-number">
-          <label for="card-number" class="label-default">Card number</label>
-          <input
-            type="number"
-            name="card-number"
-            id="card-number"
-            class="input-default"
-          />
-        </div>
-
-        <div class="input-flex">
-          <div class="expire-date">
-            <label for="expire-date" class="label-default"
-              >Expiration date</label
-            >
-
-            <div class="input-flex">
-              <input
-                type="number"
-                name="day"
-                id="expire-date"
-                placeholder="31"
-                min="1"
-                max="31"
-                class="input-default"
-              />
-
-              <input
-                type="number"
-                name="month"
-                id="expire-date"
-                placeholder="12"
-                min="1"
-                max="12"
-                class="input-default"
-              />
-            </div>
-          </div>
-
-          <div class="cvv">
-            <label for="cvv" class="label-default">CVV</label>
-            <input type="number" name="cvv" id="cvv" class="input-default" />
-          </div>
-        </div>
-      </form>
-      <button class="btn btn-primary">
-        <b>Pay</b> $ <span id="payAmount">2.15</span>
-      </button>
-    </mat-card-content> -->
     </mat-card>
   </div>
-  
 </div>

@@ -8,13 +8,17 @@ import { ModalComponent } from '../modal/modal.component';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+
   constructor(public dialog: MatDialog) { }
 
   ngOnInit(): void {
   }
   public openModal(): void {
     const dialogRef = this.dialog.open(ModalComponent, {
-      width: '500px'
+      data: {
+        page: 'login',
+      }
+
     });
 
     dialogRef.afterClosed().subscribe(result => {
@@ -24,7 +28,3 @@ export class LoginComponent implements OnInit {
   }
 }
 
-/*
-// TODO: 
-Make API call
-*/
