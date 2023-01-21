@@ -1,4 +1,4 @@
-<div class="login_container_form">
+<div *ngIf="page === 'login'" class="login_container_form">
     <div class="login_form_logo">
         <!-- <img src="assets/images/NFTme_LOGO.png" alt="" /> -->
     </div>
@@ -20,5 +20,12 @@
     </div>
     <div class="signup_button">
         <button>Sign Up</button>
+    </div>
+</div>
+
+<div *ngIf="page === 'checkout'" class="checkout_container_form">
+    <div class="checkout_form">
+        <h1>Scan QR Code to Sign in to your <a href="https://www.coinbase.com/wallet" class="">Coinbase Wallet</a></h1>
+        <div class="qrcode_img"><img src="assets/images/coinbase_QR_code.PNG" alt=""></div>
     </div>
 </div>
