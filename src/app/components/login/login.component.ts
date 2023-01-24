@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalComponent } from '../modal/modal.component';
 
@@ -8,6 +8,11 @@ import { ModalComponent } from '../modal/modal.component';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent implements OnInit {
+
+  @Output() userIsValid = false;
+
+
+  isLoggedIn = "false";
 
   constructor(public dialog: MatDialog) { }
 
@@ -25,6 +30,10 @@ export class LoginComponent implements OnInit {
       console.log('The dialog was closed', result);
       // this.animal = result;
     });
+  }
+
+  public LoginUser() {
+   
   }
 }
 

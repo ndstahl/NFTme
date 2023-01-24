@@ -13,7 +13,7 @@ public id = '';
 public username = '';
 public password = '';
 public userimg = '';
-
+public userIsValid = false;
 constructor(private nftMeService: NftMeService) {}
 
   ngOnInit(): void {
@@ -24,5 +24,9 @@ constructor(private nftMeService: NftMeService) {}
       this.password = data.password;
       this.userimg = data.userimg;
     })
+  }
+
+  LoginUser() {
+  
   }
 }
