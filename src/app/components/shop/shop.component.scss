@@ -59,7 +59,7 @@ img {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  margin-left: 215px;
+  margin-left: 258px;
   margin-right: 215px;
   justify-content: space-between;
   padding: 4em;
@@ -90,14 +90,15 @@ img {
     align-items: flex-start;
     width: 18%;
     margin-right: em;
-    padding: 1em 2em;
-    position: fixed;
+    padding: 1em 1em;
+    position: absolute;
     left: 0;
     background: transparent;
     height: 125em;
     border-radius: 10px;
-    width: 25%;
+    width: 13%;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     color: white;
+    border: groove 3px black;
   }
 }

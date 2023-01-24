@@ -18,6 +18,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatCardModule} from '@angular/material/card';
 import { NftsComponent } from './components/nfts/nfts.component';
 import { UsersComponent } from './components/users/users.component';
+import {MatSelectModule} from '@angular/material/select';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { UsersComponent } from './components/users/users.component';
     MatToolbarModule,
     MatDialogModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent],
