@@ -2,53 +2,43 @@
 <div class="shop">
   <div class="shop_side-nav">
     <mat-form-field appearance="fill">
-      <mat-label>Catgory</mat-label>
+      <mat-label>Category</mat-label>
       <mat-select>
-        <mat-option>
-          Animals
-        </mat-option>
-        <mat-option>
-          Art
-        </mat-option>
-        <mat-option>
-          Nature
-        </mat-option>
+        <mat-option> Animals </mat-option>
+        <mat-option> Art </mat-option>
+        <mat-option> Nature </mat-option>
       </mat-select>
     </mat-form-field>
     <mat-form-field appearance="fill">
-    <mat-label>Price</mat-label>
-    <mat-select>
-      <mat-option>
-        1-5 bitcoins
-      </mat-option>
-      <mat-option>
-        6-10 bitcoins
-      </mat-option>
-      <mat-option>
-        11-20 bitcoins
-      </mat-option>
-    </mat-select>
-  </mat-form-field>
+      <mat-label>Price</mat-label>
+      <mat-select>
+        <mat-option> 1-5 bitcoins </mat-option>
+        <mat-option> 6-10 bitcoins </mat-option>
+        <mat-option> 11-20 bitcoins </mat-option>
+      </mat-select>
+    </mat-form-field>
   </div>
 </div>
 <div class="flex-container">
   <div class="collection">
     <div *ngFor="let nft of nfts">
+      <!-- <div *ngFor="let nft of nftsMock"></div> -->
       <div class="flip-card">
         <div class="flip-card-inner">
           <div class="flip-card-front">
             <img
-              src="{{ nft.nftimg }}"
+              [src]="nft.nftimg"
               alt="Avatar"
               style="width: 300px; height: 300px"
             />
           </div>
           <div class="flip-card-back">
-            <h1>{{ nft.name }}</h1>
-            <p>{{ nft.description }}</p>
+            <h1>{{ nft.title }}</h1>
+            <p>{{ nft.info }}</p>
             <p>{{ nft.price }}</p>
+            <button (click)="purchaseNFT(nft)">Add to Cart</button>
+            <mat-icon>favorite</mat-icon>
             <button>Buy Now</button>
-            <button>Favorite</button>
           </div>
         </div>
       </div>

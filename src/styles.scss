@@ -1,30 +1,41 @@
-
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; padding:0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
 html,
 body {
   height: 100%;
   background-position: center;
   background-attachment: fixed;
   background-image: linear-gradient(
-    to right top,
-    #FA6E1A,
-    #FF5E62,
-    #FF659C,
-    #E77BCA,
-    #BC92E4,
-    #A489CF,
-    #8E7FBA,
-    #7B75A3,
-    #665473,
-    #4A3748,
-    #291E24,
+    to top,
+    #2e7664,
+    #415d3e,
+    #444429,
+    #3a2d1f,
+    #271b18,
+    #1d1414,
+    #120c0c,
+    #000000,
+    #000000,
+    #000000,
+    #000000,
     #000000
   );
 }
