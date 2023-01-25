@@ -4,7 +4,7 @@ const db = new Pool({
   host: "localhost",
   database: "nftme",
   port: 5400,
-  user: "CGreene1",
+  user: "admin",
   password: "nftme",
 });
 
@@ -48,19 +48,22 @@ module.exports = {
   getUsers,
 };
 const getUser = (request, response) => {
-    const username = request.body.userName;
+  const username = request.body.userName;
 
-    db.query(`SELECT username, userpassword FROM users_me WHERE username = ${userName}`, (error, results) => {
-        if(error) {
-            throw error
-        }
-        response.status(200).json(results.rows)
-    })
-}
+  db.query(
+    `SELECT username, userpassword FROM users_me WHERE username = ${userName}`,
+    (error, results) => {
+      if (error) {
+        throw error;
+      }
+      response.status(200).json(results.rows);
+    }
+  );
+};
 
 module.exports = {
-    query: (text) => db.query(text),
-    getNfts,
-    getNftsById,
-    getUser,
+  query: (text) => db.query(text),
+  getNfts,
+  getNftsById,
+  getUser,
 };
