@@ -14,7 +14,7 @@ CREATE TABLE IF NOT EXISTS nfts_me (
 );
 
 INSERT INTO
- nfts_me (nftImg, title, info, category)
+ nfts_me (nftImg, title, info, category, price)
 VALUES
   ('https://mpb-site.s3.us-east-2.amazonaws.com/imgs/winter-22/ar1.png','DesireInspire','A collection dedicated to the young black queens','art','0.00000'),
   ('https://mpb-site.s3.us-east-2.amazonaws.com/imgs/winter-22/ar2.jpg','WeBloom','A flower untouched will bloom','art','0.00000'),
