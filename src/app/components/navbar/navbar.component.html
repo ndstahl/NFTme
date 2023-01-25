@@ -1,9 +1,17 @@
 <mat-toolbar>
- <img src="../../../assets/images/nftlogo2.png" alt="Logo" height="36" class="nft-logo">
+  <img
+    src="../../../assets/images/nftlogo2.png"
+    alt="Logo"
+    height="36"
+    class="nft-logo"
+  />
   <span>NFTme</span>
   <div class="spacer"></div>
+  <a mat-button (click)="router.navigate(['/shop'])">Shop</a>
   <mat-icon>shopping_cart</mat-icon>
-  <a mat-button (click)="router.navigate(['/checkout']);">Check Out</a>
+  <a mat-button (click)="router.navigate(['/checkout'])">Check Out</a>
 
-  <a mat-raised-button (click)="router.navigate(['/']);"color="primary" >Sign Out</a>
+  <a mat-raised-button (click)="router.navigate(['/'])" color="primary"
+    >Sign Out</a
+  >
 </mat-toolbar>

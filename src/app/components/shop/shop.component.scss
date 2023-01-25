@@ -2,7 +2,11 @@
   background-color: transparent;
   width: 300px;
   height: 300px;
-  border: 1px solid #F1F1F1;
+  border-radius: 4%;
+  position: relative;
+  overflow: hidden;
+  border: solid;
+  border-color: white;
   perspective: 1000px; /* Remove this if you don't want the 3D effect */
 }
 /* This container is needed to position the front and back side */
@@ -39,7 +43,7 @@
   transform: rotateY(180deg);
   border: groove;
   border-color: black;
-  border-radius: 10%;
+  border-radius: 4%;
 }
 img {
   width: 100%;
@@ -81,9 +85,11 @@ img {
 .shop {
   display: flex;
   flex-direction: row;
-  justify-content: left;
+  justify-content: space-between;
   position: relative;
   gap: 2em;
+  margin-top: 0.5em;
+
   &_side-nav {
     display: flex;
     flex-direction: column;
@@ -99,6 +105,15 @@ img {
     width: 13%;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     color: white;
-    border: groove 3px black;
+    gap: 1.5em;
   }
+}
+
+mat-icon {
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  padding: 0.1em 1em;
+  flex-direction: column;
+  cursor: pointer;
 }

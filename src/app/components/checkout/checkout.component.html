@@ -1,6 +1,6 @@
 <app-navbar></app-navbar>
 <h1 class="cart-Title">Shopping Cart</h1>
-<input type="button" value="Back to Shop" onclick="history.back()"/> 
+<input type="button" value="Back to Shop" onclick="history.back()" />
 <div class="cards_container_all">
   <div class="matt-card-container2">
     <mat-card class="example-card2">
@@ -9,42 +9,35 @@
       </mat-card-header>
 
       <mat-card-content>
+        <div *ngIf="nfts.length === 0">Your cart is Empty</div>
         <div class="product-card" *ngFor="let nft of nfts">
           <div class="card">
             <div class="img-box">
               <img
-                src="{{nft.nftimg}}"
+                [src]="nft.nftimg"
                 alt="NFT1"
                 width="80px"
                 class="product-img"
               />
             </div>
             <div class="detail">
-              <h3 class="product-name">{{nft.title}}</h3>
-              <h4>{{nft.category}}</h4>
-              <p>{{nft.info}}</p>
+              <h3 class="product-name">{{ nft.title }}</h3>
+              <h4>{{ nft.category }}</h4>
+              <p>{{ nft.info }}</p>
               <div class="wrapper">
-
-                <div class="price">$ <span id="price">{{nft.price}}</span></div>
+                <div class="price">
+                  $ <span id="price">{{ nft.price }}</span>
+                </div>
               </div>
             </div>
             <button class="product-close-btn"></button>
           </div>
         </div>
 
-        <div class="wrapper">
+        <div *ngIf="nfts.length > 0" class="wrapper">
           <div class="amount">
-            <div class="subtotal">
-              <span>Subtotal</span>
-              <span>$ <span id="subtotal">2.05</span></span>
-            </div>
-
-            <div class="tax">
-              <span>Tax</span> <span>$ <span id="tax">0.10</span></span>
-            </div>
-
             <div class="total">
-              <span>Total</span> <span>$ <span id="total">2.15</span></span>
+              <span>Total</span> <span><span id="1Bitcoin"></span></span>
             </div>
           </div>
         </div>
@@ -58,10 +51,15 @@
         <mat-card-subtitle>Payment Method</mat-card-subtitle>
       </mat-card-header>
       <mat-card-actions class="mdc-card_actions">
-        <button mat-button>Sign In to Crypto Wallet</button>
+        <h2>Sign Into Your Crypto Wallet</h2>
         <button (click)="openModal()" class="coinbase_Logo">
           <div>
-            <img alt="" height="30px" src="https://static.opensea.io/logos/walletlink-alternative.png" size="24" />
+            <img
+              alt=""
+              height="30px"
+              src="https://static.opensea.io/logos/walletlink-alternative.png"
+              size="24"
+            />
           </div>
           <div>
             <span font-weight="700" font-size="14px">Coinbase Wallet</span>
@@ -69,7 +67,12 @@
         </button>
         <button class="coinbase_Logo">
           <div>
-            <img alt="" height="30px" src="https://static.opensea.io/logos/walletconnect-alternative.png" size="24" />
+            <img
+              alt=""
+              height="30px"
+              src="https://static.opensea.io/logos/walletconnect-alternative.png"
+              size="24"
+            />
           </div>
           <div>
             <span font-weight="700" font-size="14px">MetaMask</span>
@@ -77,7 +80,12 @@
         </button>
         <button class="coinbase_Logo">
           <div>
-            <img alt="" height="30px" src="../../../assets/images/bitkeepicon.png" size="24" />
+            <img
+              alt=""
+              height="30px"
+              src="../../../assets/images/bitkeepicon.png"
+              size="24"
+            />
           </div>
           <div>
             <span font-weight="700" font-size="14px">BitKeep</span>
