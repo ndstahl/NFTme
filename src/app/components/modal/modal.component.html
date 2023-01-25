@@ -1,4 +1,4 @@
-<div *ngIf="page === 'login'" class="login_container_form">
+<div [formGroup]="modalForm" *ngIf="page === 'login'" class="login_container_form">
     <div class="login_form_logo">
         <!-- <img src="assets/images/NFTme_LOGO.png" alt="" /> -->
     </div>
@@ -7,20 +7,20 @@
         <h1>LOGIN</h1>
     </div>
     <div class="username_field">
-        <input type="text" class="login_fields" placeholder="UserName" />
+        <input formControlName="username" type="text" class="login_fields" placeholder="Username" />
     </div>
     <div class="password_field">
-        <input type="password" class="login_fields" placeholder="Password" />
+        <input formControlName="userpassword" type="password" class="login_fields" placeholder="Password" />
     </div>
     <div class="login_button">
-        <button>Login</button>
+        <button (click)="close()">Login</button>
     </div>
-    <!-- <div class="forgot_password_button">
+    <div class="forgot_password_button">
         <button>Forgot Password</button>
-    </div> -->
-    <!-- <div class="signup_button">
+    </div> 
+    <div class="signup_button">
         <button>Sign Up</button>
-    </div> -->
+    </div>
 </div>
 
 <div *ngIf="page === 'checkout'" class="checkout_container_form">

@@ -15,9 +15,20 @@ export class NftMeService {
       '/api/nfts');
   }
 
+  deleteNftData(): Observable<any>{
+    return this.httpClient.delete(
+      '/api/nfts');
+  }
+
   getUserData(): Observable<any>{
     return this.httpClient.get(
       '/api/users');
+  }
+
+  postUserLogin(userCredentials: any): Observable<any> {
+    return this.httpClient.post(
+      '/api/login',userCredentials
+    )
   }
 
   getLoginData(): Observable<any>{

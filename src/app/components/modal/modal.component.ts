@@ -1,4 +1,5 @@
 import { Component, Inject, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import {
   MatDialogModule,
   MatDialogRef,
@@ -22,6 +23,7 @@ export class ModalComponent implements OnInit {
   public animal = '';
   public name = '';
   public page = '';
+  public modalForm: FormGroup = new FormGroup({});
   constructor(
     public router: Router,
     public dialogRef: MatDialogRef<ModalComponent>,
@@ -32,9 +34,17 @@ export class ModalComponent implements OnInit {
 
   ngOnInit(): void {
     this.page = this.data.page
+    this.modalForm = new FormGroup({
+      username: new FormControl(""),
+      userpassword: new FormControl(""),
+    });
   }
+
   close(): void {
-    this.dialogRef.close();
+    this.dialogRef.close({
+        username: this.modalForm.get("username")?.value,
+        userpassword: this.modalForm.get("userpassword")?.value,
+    });
   }
 
   signIn() {

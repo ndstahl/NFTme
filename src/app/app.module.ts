@@ -18,7 +18,8 @@ import {MatCardModule} from '@angular/material/card';
 import { NftsComponent } from './components/nfts/nfts.component';
 import { UsersComponent } from './components/users/users.component';
 import {MatSelectModule} from '@angular/material/select';
-import { ConfirmationComponent } from './confirmation/confirmation.component';
+import { ConfirmationComponent } from './components/confirmation/confirmation.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { ConfirmationComponent } from './confirmation/confirmation.component';
     ModalComponent,
     NftsComponent,
     UsersComponent,
-    ConfirmationComponent
+    ConfirmationComponent,
 
   ],
   imports: [
@@ -44,7 +45,8 @@ import { ConfirmationComponent } from './confirmation/confirmation.component';
     MatDialogModule,
     MatIconModule,
     MatCardModule,
-    MatSelectModule
+    MatSelectModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
