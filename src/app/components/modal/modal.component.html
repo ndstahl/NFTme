@@ -25,6 +25,9 @@
 
 <div *ngIf="page === 'checkout'" class="checkout_container_form">
     <div class="checkout_form">
+        <div class="checkout_form_close">
+            <button (click)="CloseModal()">X</button>
+        </div>
         <h1>Scan QR Code to Sign in to your <a href="https://www.coinbase.com/wallet" class="">Coinbase Wallet</a></h1>
         <div class="qrcode_img"><img src="assets/images/coinbase_QR_code.PNG" alt=""></div>
     </div>

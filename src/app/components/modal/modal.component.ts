@@ -36,6 +36,10 @@ export class ModalComponent implements OnInit {
     this.dialogRef.close();
   }
 
+  CloseModal() {
+    this.close();
+  }
+
   // openDialog(): void {
   //   const dialogRef = this.dialog.open( {
   //     width: '250px',
