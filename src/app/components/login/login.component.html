@@ -13,14 +13,31 @@
       <div class="login_form_webpage_name">
         <h1>Welcome to NFTme Sign In</h1>
       </div>
-      <div class="username_field">
-        <input type="text" placeholder="UserName" />
+      <div *ngIf="!userIsValid">
+        <p style="color:red">Login Is Invalid</p>
       </div>
+      <!-- <div class="username_field">
+        <form [formGroup]="userForm">
+
+          <label for="username"
+        </form>
+        <input type="text" placeholder="UserName" id="userName"
+        class="form-control" formControlName="userName" required>
+        <div *ngIf="userForm[] && (userName.dirty || userName.touched)"
+          class="alert alert-danger">
+        <div *ngIf="userName.errors?.['required']">
+          Name is required.
+        </div>
+        <div *ngIf="userName.errors?.['minlength']">
+          Name must be at least 4 characters long.
+        </div>
+      </div>
+      </div> -->
       <div class="password_field">
-        <input type="password" placeholder="Password" />
+        <input required type="password" placeholder="Password">
       </div>
       <div class="login_button">
-        <button>Login</button>
+        <button [routerLink]="['/shop']">Login</button>
       </div>
       <div class="forgot_password_button">
         <button>Forgot Password</button>
