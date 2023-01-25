@@ -4,7 +4,7 @@ import {
   MatDialogRef,
   MAT_DIALOG_DATA,
 } from '@angular/material/dialog';
-
+import { Router } from '@angular/router';
 export interface DialogData {
   animal: string;
   name: string;
@@ -23,6 +23,7 @@ export class ModalComponent implements OnInit {
   public name = '';
   public page = '';
   constructor(
+    public router: Router,
     public dialogRef: MatDialogRef<ModalComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {
@@ -36,8 +37,16 @@ export class ModalComponent implements OnInit {
     this.dialogRef.close();
   }
 
+  signIn() {
+    this.page = 'order_detail'
+  }
+
   CloseModal() {
     this.close();
+  }
+
+  checkout_proceed() {
+    this.page = 'confirmation_form'
   }
 
   // openDialog(): void {
