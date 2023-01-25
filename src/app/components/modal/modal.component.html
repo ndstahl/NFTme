@@ -28,7 +28,37 @@
         <div class="checkout_form_close">
             <button (click)="CloseModal()">X</button>
         </div>
-        <h1>Scan QR Code to Sign in to your <a href="https://www.coinbase.com/wallet" class="">Coinbase Wallet</a></h1>
+        <div class="left_side_checkout_login_form">
+            <div class="username_field">
+                <input type="text" class="login_fields" placeholder="UserName" />
+            </div>
+            <div class="password_field">
+                <input type="password" class="login_fields" placeholder="Password" />
+            </div>
+            <div class="login_button">
+                <button (click)="signIn()">Login</button>
+            </div>
+            <h1 class="coinbase_link">Scan QR Code to Sign in to your <a href="https://www.coinbase.com/wallet"
+                    class="">Coinbase
+                    Wallet</a>
+            </h1>
+        </div>
         <div class="qrcode_img"><img src="assets/images/coinbase_QR_code.PNG" alt=""></div>
+    </div>
+</div>
+
+
+<div *ngIf="page === 'order_detail'" class="order_detail_form">
+    <div class="order_detail_form">
+        <h1>Order Detail</h1>
+        <div class="checkout_form_close">
+            <button (click)="CloseModal()">X</button>
+
+            <div class="bitcoin_balance">
+                <h1>Bitcoin Balance: 5 BTC</h1>
+                <h1>Purchase Amount: 2 BTC</h1>
+            </div>
+            <button (click)="CloseModal()" [routerLink]="['/confirmation']">Continue with Purchase</button>
+        </div>
     </div>
 </div>

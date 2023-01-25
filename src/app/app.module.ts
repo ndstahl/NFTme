@@ -18,6 +18,7 @@ import {MatCardModule} from '@angular/material/card';
 import { NftsComponent } from './components/nfts/nfts.component';
 import { UsersComponent } from './components/users/users.component';
 import {MatSelectModule} from '@angular/material/select';
+import { ConfirmationComponent } from './confirmation/confirmation.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import {MatSelectModule} from '@angular/material/select';
     CheckoutComponent,
     ModalComponent,
     NftsComponent,
-    UsersComponent
+    UsersComponent,
+    ConfirmationComponent
 
   ],
   imports: [
