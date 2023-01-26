@@ -17,9 +17,6 @@ export class ShopComponent {
     this.nftMeService.getNftData().subscribe((res: any) => {
       console.log('DATA', res.data);
       this.nfts = res.data;
-      this.nftMeService.$nftMeData.next({
-        nfts: res.data,
-      });
     });
     // this.nfts = this.nftsMock;
     //this.nftMeService.$nftMeData.next({
