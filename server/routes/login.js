@@ -21,6 +21,6 @@ router.post("/", async (req, res) => {
     res.json({
       data: data.rows,
     });
-  });
+});
 
 module.exports = router;

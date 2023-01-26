@@ -6,15 +6,21 @@
         <!-- <img src="assets/images/nftme-high-res-logo.png" alt="" class="nftme_logo_img" /> -->
         <h1>LOGIN</h1>
     </div>
-    <div class="username_field">
-        <input formControlName="username" type="text" class="login_fields" placeholder="Username" />
-    </div>
-    <div class="password_field">
-        <input formControlName="userpassword" type="password" class="login_fields" placeholder="Password" />
-    </div>
-    <div class="login_button">
-        <button (click)="close()" [routerLink]="['/shop']">Log In</button>
-    </div>
+    <form (ngSubmit)="onSubmit()">
+        <div *ngIf="!userIsValid"> Please Try Again!</div>
+        <div class="username_field">
+            <input id="username" type="text" class="form-control login_fields" formControlName="username" required placeholder="Username"/>
+            <div *ngIf="modalForm.controls['username'].invalid" class="alert alert-danger"></div>
+        </div>
+        <div class="password_field">
+            <input id="password" type="password" class="form-control login_fields" formControlName="password" placeholder="Password" required/>
+          <div *ngIf="modalForm.controls['password'].invalid" class="alert alert-danger">
+            </div>
+        </div>
+        <div class="login_button">
+          <button type="submit" [disabled]="!modalForm.valid" (click)="close()">Login</button>
+        </div>
+    </form>
     <div class="forgot_password_button">
         <button>Forgot Password</button>
     </div>
