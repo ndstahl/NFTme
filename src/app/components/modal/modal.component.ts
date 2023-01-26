@@ -79,7 +79,8 @@ export class ModalComponent implements OnInit {
   }
 
   CloseModal() {
-    this.close();
+    this.router.navigateByUrl('/confirmation');
+    this.dialogRef.close();
   }
 
   checkout_proceed() {

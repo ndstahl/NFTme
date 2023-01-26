@@ -20,6 +20,9 @@ import { UsersComponent } from './components/users/users.component';
 import {MatSelectModule} from '@angular/material/select';
 import { ConfirmationComponent } from './components/confirmation/confirmation.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { AboutComponent } from './components/about/about.component';
+import { ContactComponent } from './components/contact/contact.component';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -33,6 +36,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     NftsComponent,
     UsersComponent,
     ConfirmationComponent,
+    AboutComponent,
+    ContactComponent,
 
   ],
   imports: [
@@ -46,7 +51,8 @@ import { ReactiveFormsModule } from '@angular/forms';
     MatIconModule,
     MatCardModule,
     MatSelectModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent],
