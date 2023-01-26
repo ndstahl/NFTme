@@ -4,7 +4,7 @@ const db = new Pool({
   host: "localhost",
   database: "nftme",
   port: 5400,
-  user: "CGreene1",
+  user: "admin",
   password: "nftme",
 });
 
