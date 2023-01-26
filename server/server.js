@@ -7,6 +7,8 @@ const shop = require('./routes/shop');
 const login = require('./routes/login');
 const nfts = require('./routes/nfts');
 const checkout = require('./routes/checkout');
+const about = require('./routes/about');
+const contact = require('./routes/contact');
 
 
 const start = async () => {
