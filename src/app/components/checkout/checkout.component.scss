@@ -20,6 +20,10 @@
   align-content: center;
 }
 
+.matt-card-container2 {
+  margin-right: 5rem
+}
+
 .coinbase_Logo {
   display: flex;
   flex-direction: row;
@@ -60,4 +64,8 @@ h1 {
   font-size: 3rem;
   display: flex;
   justify-content: center;
+}
+
+.backButton {
+  margin-left: 2em;
 }
