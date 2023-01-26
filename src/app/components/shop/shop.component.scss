@@ -76,12 +76,27 @@ img {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-evenly;
   padding: 0.1em;
   font-size: larger;
   font-weight: bold;
   margin-bottom: 1em;
+  gap: 1em;
 }
+
+.w3-center {
+  display: flex;
+  margin-left: 53.5em;
+  justify-content: center;
+  align-items: center;
+  width: 30em;
+  height: 3em;
+}
+
+a {
+  color: white;
+}
+
+
 .shop {
   display: flex;
   flex-direction: row;
@@ -106,6 +121,7 @@ img {
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     color: white;
     gap: 1.5em;
+    margin-top: 8em;
   }
 }
 
@@ -117,3 +133,4 @@ mat-icon {
   flex-direction: column;
   cursor: pointer;
 }
+
