@@ -11,40 +11,21 @@
         <img src="" alt="" />
       </div>
       <div class="login_form_webpage_name">
-        <h1>Welcome to NFTme Sign In</h1>
+        <h1>Welcome to NFTme Please Sign In</h1>
       </div>
-      <div *ngIf="!userIsValid">
-        <p style="color:red">Login Is Invalid</p>
+      <div class="inputBox">
+        <input type="text" required="required" />
+        <span>Username</span>
+        <i></i>
       </div>
-      <!-- <div class="username_field">
-        <form [formGroup]="userForm">
-
-          <label for="username"
-        </form>
-        <input type="text" placeholder="UserName" id="userName"
-        class="form-control" formControlName="userName" required>
-        <div *ngIf="userForm[] && (userName.dirty || userName.touched)"
-          class="alert alert-danger">
-        <div *ngIf="userName.errors?.['required']">
-          Name is required.
-        </div>
-        <div *ngIf="userName.errors?.['minlength']">
-          Name must be at least 4 characters long.
-        </div>
+      <div class="inputBox">
+        <input type="password" required="required" />
+        <span>Password</span>
+        <i></i>
       </div>
-      </div> -->
-      <div class="password_field">
-        <input required type="password" placeholder="Password">
-      </div>
-      <div class="login_button">
-        <button [routerLink]="['/shop']">Login</button>
-      </div>
-      <div class="forgot_password_button">
-        <button>Forgot Password</button>
-      </div>
-      <div class="signup_button">
-        <button>Sign Up</button>
-      </div>
+      <div class="login_button"></div>
+      <div class="forgot_password_button"></div>
+      <div class="signup_button"></div>
     </div>
   </div>
 </div>
