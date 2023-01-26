@@ -22,23 +22,14 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
     this.nftMeService.postUserLogin(this.userData).subscribe((res) => {
       console.log('data coming back', res)
-      this.userData = res;
+      if(res.msg){
+        this.userIsValid = false;
+      } else {
+        this.userData = res;
+      }
     })
-      this.buildUserForm();
   
   }
-
-  public buildUserForm() {
-    this.userForm = new FormGroup({
-        username: new FormControl('', [
-        Validators.required,
-        Validators.minLength(4),
-      ]),
-      password: new FormControl('', Validators.required),
-    });
-  }
-
-
 
   public openModal(): void {
     const dialogRef = this.dialog.open(ModalComponent, {
@@ -52,21 +43,14 @@ export class LoginComponent implements OnInit {
       console.log('The dialog was closed', result);
       this.nftMeService.postUserLogin(result).subscribe((res) => {
         console.log('data coming back', res)
+        if(res.msg){
+
+        }
         this.userData = res;
       })
 
     });
   }
 
-  public ValidateUser() {
-   if(this.userData.username === "Caylee" && this.userData.userpassword === "nftme") {
-
-    this.userIsValid === true;
-    console.log('aare you validddddd',this.userIsValid);
-   } else {
-    this.userIsValid === false;
-    console.log('aare you validddddd',this.userIsValid);
-   }
-  }
 }
 
