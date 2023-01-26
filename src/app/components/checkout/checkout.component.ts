@@ -5,39 +5,33 @@ import { ModalComponent } from '../modal/modal.component';
 @Component({
   selector: 'app-checkout',
   templateUrl: './checkout.component.html',
-  styleUrls: ['./checkout.component.scss']
+  styleUrls: ['./checkout.component.scss'],
 })
 export class CheckoutComponent {
+  public nfts: any[] = [];
 
-
-  public nfts: any[] =[];
-
-  public isCheckout = true
-  constructor(private nftMeService: NftMeService, private dialog: MatDialog) { }
-
-
+  public isCheckout = true;
+  constructor(private nftMeService: NftMeService, private dialog: MatDialog) {}
 
   ngOnInit(): void {
-
-    this.nftMeService.getNftData().subscribe((res:any) => {
-      console.log('DATA' , res.data);
-      this.nfts = res.data;
-      this.nftMeService.$nftMeData.next({
-        nfts: res.data,
-      });
+    this.nftMeService.$nftMeData.subscribe((data) => {
+      this.nfts = data;
     });
   }
-   public openModal(): void {
+  public openModal(): void {
     const dialogRef = this.dialog.open(ModalComponent, {
       data: {
         page: 'checkout',
-      }
-
+      },
     });
 
-    dialogRef.afterClosed().subscribe(result => {
+    dialogRef.afterClosed().subscribe((result) => {
       console.log('The dialog was closed', result);
       // this.animal = result;
     });
+  }
+
+  removeFromCart(idx: number) {
+    this.nfts.splice(idx, 1);
   }
 }

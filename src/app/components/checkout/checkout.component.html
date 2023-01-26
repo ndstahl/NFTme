@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
 <h1 class="cart-Title">Shopping Cart</h1>
 <input type="button" value="Back to Shop" onclick="history.back()" />
-<div class="cards_container_all">
+<div class="cards_container">
   <div class="matt-card-container2">
     <mat-card class="example-card2">
       <mat-card-header>
@@ -10,7 +10,8 @@
 
       <mat-card-content>
         <div *ngIf="nfts.length === 0">Your cart is Empty</div>
-        <div class="product-card" *ngFor="let nft of nfts">
+        <div class="product-card" *ngFor="let nft of nfts; index as i">
+          <button (click)="removeFromCart(i)">Remove</button>
           <div class="card">
             <div class="img-box">
               <img
@@ -30,7 +31,6 @@
                 </div>
               </div>
             </div>
-            <button class="product-close-btn"></button>
           </div>
         </div>
 
@@ -96,4 +96,3 @@
   </div>
 </div>
 <app-footer></app-footer>
-
