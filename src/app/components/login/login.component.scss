@@ -55,9 +55,9 @@ button {
   z-index: 2;
 }
 
-button:hover {
-  cursor: pointer;
-} 
+// button:hover {
+//   cursor: pointer;
+// } 
 */
 
 .box {
@@ -188,4 +188,22 @@ button:hover {
 .inputBox input:valid ~ i,
 .inputBox input:focus ~ i {
   height: 44px;
+}
+
+
+.login_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3em;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button {
+  height: 2em;
+  width: 7em;
 }

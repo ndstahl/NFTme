@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { NftMeService } from 'src/app/services/nft-me.service';
 
 @Component({
   selector: 'app-confirmation',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./confirmation.component.scss']
 })
 export class ConfirmationComponent {
+
+  constructor(private nftMeService: NftMeService) { }
 
 }
