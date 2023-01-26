@@ -13,11 +13,11 @@
         <input formControlName="userpassword" type="password" class="login_fields" placeholder="Password" />
     </div>
     <div class="login_button">
-        <button (click)="close()">Login</button>
+        <button (click)="close()" [routerLink]="['/shop']">Log In</button>
     </div>
     <div class="forgot_password_button">
         <button>Forgot Password</button>
-    </div> 
+    </div>
     <div class="signup_button">
         <button>Sign Up</button>
     </div>
@@ -36,7 +36,7 @@
                 <input type="password" class="login_fields" placeholder="Password" />
             </div>
             <div class="login_button">
-                <button (click)="signIn()">Login</button>
+                <button (click)="signIn()">Log In</button>
             </div>
             <h1 class="coinbase_link">Scan QR Code to Sign in to your <a href="https://www.coinbase.com/wallet"
                     class="">Coinbase
@@ -52,7 +52,7 @@
     <div class="order_detail_form">
         <h1>Order Detail</h1>
         <div class="checkout_form_close">
-            <button (click)="CloseModal()">X</button>
+            <button (click)="CloseModal()">Close</button>
 
             <div class="bitcoin_balance">
                 <h1>Bitcoin Balance: 5 BTC</h1>

@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent {
-  constructor(public router: Router) {}
+  constructor(public router: Router) { }
   public navbarLinks = [
     {
       name: 'Shop',
