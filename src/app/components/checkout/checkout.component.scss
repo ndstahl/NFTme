@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100&display=swap');
+
 .cards_container {
   display: flex;
   flex-direction: row;
@@ -42,18 +44,6 @@
   margin: 5rem;
 }
 
-.amount {
-  padding: 100px;
-}
-
-.amount > div {
-  display: flex;
-  justify-content: space-between;
-}
-
-.amount > div:not(:last-child) {
-  margin-bottom: 10px;
-}
 .button {
   cursor: pointer;
 }
@@ -66,6 +56,72 @@ h1 {
   justify-content: center;
 }
 
-.backButton {
-  margin-left: 2em;
+.product-card {
+  display: flex;
+  align-items: center;
+
 }
+
+.backShop_Button{
+  position:relative;
+  left:80px;
+  bottom: 50px;
+  padding-left:1rem;
+}
+
+.btn {
+  width: 180px;
+  height: 60px;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid gold;
+  outline: none;
+  transition: 1s ease-in-out;
+}
+
+svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  fill: none;
+
+}
+
+.btn:hover {
+  transition: 1s ease-in-out;
+  background: #ADC698;
+}
+
+.btn:hover svg {
+  stroke-dashoffset: -480;
+}
+
+.btn span {
+  color: white;
+  font-size: 18px;
+  font-weight: 100;
+}
+
+.remove_btn {
+  margin-right: 3rem;
+  border: none;
+  color: red;
+  background-color: white;
+  margin-bottom: 5rem;
+}
+
+.order_Total{
+  font-size: 19px;
+  padding-top: 2em;
+  font-weight: 500;
+}
+
+.totalAmount {
+  margin-top:1rem;
+}
+
+
+
+
+
+
