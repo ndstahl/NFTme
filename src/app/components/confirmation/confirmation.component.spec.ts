@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import * as JSConfetti from 'js-confetti';
 
 import { ConfirmationComponent } from './confirmation.component';
 
@@ -20,4 +21,8 @@ describe('ConfirmationComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  
+  const jsConfetti = new JSConfetti()
+
+jsConfetti.addConfetti()
 });

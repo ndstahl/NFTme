@@ -1,45 +1,61 @@
 .login_container_form {
-    display: flex;
-    flex-direction: column;
-    width: 35em;
-    height: 30em;
-    border-radius: 2em;
-    justify-content: center;
-    align-items: center;
-    gap: .5em
+  display: flex;
+
+  flex-direction: column;
+  width: 35em;
+  height: 40em;
+  border-radius: 0.1em;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+
+  background: #1c1c1c;
+
+  overflow: hidden;
 }
 
 img {
-    size: 10em;
+  size: 10em;
 }
 
 .login_form_webpage_name {
-    display: flex;
-    font-size: 20px;
+  display: flex;
+  font-size: 20px;
 }
 
 .login_fields {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: relative;
+  width: 100%;
+  padding: 20px 10px 10px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #23242a;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  z-index: 10;
 }
 
 button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
 }
 
 .checkout_form {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    width: 40em;
-    height: 20em;
-    border-radius: none;
-    margin-left: 1em;
-    margin-right: 1em;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 40em;
+  height: 20em;
+  border-radius: none;
+  margin-left: 1em;
+  margin-right: 1em;
 
     &_close { 
         margin-bottom: 237px;
@@ -48,27 +64,148 @@ button {
 }
 
 .left_side_checkout_login_form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: .5em;
-
-    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
 }
 
-a:visited, a:hover, a:focus {
-    text-decoration: none;
-    color: #0000EE;
+a:visited,
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: #0000ee;
 }
-
 
 h1.coinbase_link {
-    padding: .5em;
-    
+  padding: 0.5em;
 }
 
-
 .order_detail_form {
-    width: 30em;
-    height: 20em;
+  width: 30em;
+  height: 20em;
+}
+
+///
+
+.login_container_form::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50;
+  width: 35em;
+  height: 40em;
+  background: linear-gradient(0deg, transparent, #44f3ff11, #45f3ff1d);
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+}
+
+.login_container_form::after {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50;
+  width: 30em;
+  height: 40em;
+  background: linear-gradient(0deg, transparent, #45f3ff1a, #45f3ff38);
+  transform-origin: bottom right;
+  animation: animate 6s linear infinite;
+  animation-delay: -3s;
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.form {
+  position: absolute;
+  inset: 2px;
+  border-radius: 8px;
+  background: #28292d;
+  z-index: 10;
+  padding: 50px 40px;
+  display: flex;
+  flex-direction: column;
+}
+h1 {
+  color: #45f3ff;
+  font-weight: 500;
+  text-align: center;
+  letter-spacing: 0.1em;
+}
+
+.inputBox {
+  position: relative;
+  width: 300px;
+  margin-top: 35px;
+}
+
+.inputBox input {
+  position: relative;
+  width: 100%;
+  padding: 20px 10px 10px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #23242a;
+  font-size: 1em;
+  letter-spacing: 0.05em;
+  z-index: 10;
+}
+
+.inputBox span {
+  position: absolute;
+  left: 0;
+  padding: 20px 10px 10px;
+  font-size: 1em;
+  color: #8f8f8f;
+  pointer-events: none;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+}
+
+.inputBox input:valid ~ span,
+.inputBox input:focus ~ span {
+  color: #45f3ff;
+  transform: translateX(-10px) translateY(-34px);
+  font-size: 0.75em;
+}
+
+.inputBox i {
+  position: absolute;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  background: #45f3ff;
+  border-radius: 4px;
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 9;
+}
+
+.inputBox input:valid ~ i,
+.inputBox input:focus ~ i {
+  height: 44px;
+}
+
+.login_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3em;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button {
+  height: 2em;
+  width: 7em;
 }
