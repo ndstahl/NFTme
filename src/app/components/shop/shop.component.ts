@@ -27,6 +27,7 @@ export class ShopComponent {
     console.log('item', item);
     this.purchaseItems.push(item);
     this.nftMeService.$nftMeData.next(this.purchaseItems);
+    this.nftMeService.$checkoutData.next(this.purchaseItems.length);
   }
 }
 
