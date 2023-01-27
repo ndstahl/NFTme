@@ -38,6 +38,9 @@ img {
   font-size: 1em;
   letter-spacing: 0.05em;
   z-index: 10;
+  border: 1px solid white;
+  border-radius: 0.5em;
+  color: white;
 }
 
 button {
@@ -45,6 +48,8 @@ button {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  background-color: rgb(100, 175, 100);
+  border-radius: .5em;
 }
 
 .checkout_form {
@@ -59,8 +64,21 @@ button {
 
     &_close { 
         margin-bottom: 237px;
-        margin-top: 5em;
+        margin-top: 1em;
     }
+}
+
+.checkout-close {
+  color: white;
+  background-color: black;
+  margin-right: 0.5em;
+  width: 2.5em;
+}
+
+.checkout-login-button {
+  color: white;
+  background-color: black;
+  margin-right: 0.5em;
 }
 
 .left_side_checkout_login_form {
@@ -68,6 +86,16 @@ button {
   flex-direction: column;
   align-items: center;
   gap: 0.5em;
+}
+
+.username_field {
+  border: 2px solid grey;
+  height: 2.5em;
+}
+
+.password_field {
+  border: 2px solid grey;
+  height: 2.5em;
 }
 
 a:visited,
@@ -78,48 +106,82 @@ a:focus {
 }
 
 h1.coinbase_link {
-  padding: 0.5em;
+  padding: 1.5em 3em 0em 0em;
+  color: black;
+  font-size: 17px;
 }
 
 .order_detail_form {
   width: 30em;
-  height: 20em;
+  height: 15em;
 }
 
+.order-detail-welcome {
+  display: flex;
+  flex-direction: column;
+  margin: 1em 1em 1em 0.5em;
+  font-size: 35px;
+}
+
+.order-detail-balance {
+  margin: 2em;
+
+}
+
+.buttons {
+  display: flex;
+  margin: 3em 0em 0em 2em;
+}
+
+.balance {
+  font-size: 23px;
+}
+
+.order-detail-cancel {
+  color: white;
+  background-color: red;
+  margin-right: 0.5em;
+}
+
+.order-detail-complete {
+  color: white;
+  background-color: green;
+  
+}
 ///
 
-.login_container_form::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50;
-  width: 35em;
-  height: 40em;
-  background: linear-gradient(0deg, transparent, #44f3ff11, #45f3ff1d);
-  transform-origin: bottom right;
-  animation: animate 6s linear infinite;
-}
+// .login_container_form::before {
+//   content: "";
+//   position: absolute;
+//   top: -50%;
+//   left: -50;
+//   width: 35em;
+//   height: 40em;
+//   background: linear-gradient(0deg, transparent, #44f3ff11, #45f3ff1d);
+//   transform-origin: bottom right;
+//   animation: animate 6s linear infinite;
+// }
 
-.login_container_form::after {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50;
-  width: 30em;
-  height: 40em;
-  background: linear-gradient(0deg, transparent, #45f3ff1a, #45f3ff38);
-  transform-origin: bottom right;
-  animation: animate 6s linear infinite;
-  animation-delay: -3s;
-}
-@keyframes animate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
+// .login_container_form::after {
+//   content: "";
+//   position: absolute;
+//   top: -50%;
+//   left: -50;
+//   width: 30em;
+//   height: 40em;
+//   background: linear-gradient(0deg, transparent, #45f3ff1a, #45f3ff38);
+//   transform-origin: bottom right;
+//   animation: animate 6s linear infinite;
+//   animation-delay: -3s;
+// }
+// @keyframes animate {
+//   0% {
+//     transform: rotate(0deg);
+//   }
+//   100% {
+//     transform: rotate(360deg);
+//   }
+// }
 .form {
   position: absolute;
   inset: 2px;
@@ -129,6 +191,8 @@ h1.coinbase_link {
   padding: 50px 40px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 h1 {
   color: #45f3ff;
@@ -207,5 +271,24 @@ button:hover {
 
 button {
   height: 2em;
-  width: 7em;
+  width: 10em;
+}
+
+// .mdc-dialog__container {
+//   height: 70em;
+//   width: 70em;
+// }
+
+.login_button {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+form {
+  gap: 1em;
+  display: flex;
+  flex-direction: column;
 }

@@ -9,30 +9,33 @@
     <form (ngSubmit)="onSubmit()">
         <div *ngIf="!userIsValid"> Please Try Again!</div>
         <div class="username_field">
-            <input id="username" type="text" class="form-control login_fields" formControlName="username" required placeholder="Username"/>
+            <input id="username" type="text" class="form-control login_fields" formControlName="username" required
+                placeholder="Username" />
             <div *ngIf="modalForm.controls['username'].invalid" class="alert alert-danger"></div>
         </div>
         <div class="password_field">
-            <input id="password" type="password" class="form-control login_fields" formControlName="password" placeholder="Password" required/>
-          <div *ngIf="modalForm.controls['password'].invalid" class="alert alert-danger">
+            <input id="password" type="password" class="form-control login_fields" formControlName="password"
+                placeholder="Password" required />
+            <div *ngIf="modalForm.controls['password'].invalid" class="alert alert-danger">
             </div>
         </div>
         <div class="login_button">
-          <button type="submit" [disabled]="!modalForm.valid" (click)="close()">Login</button>
+            <button type="submit" [disabled]="!modalForm.valid" (click)="close()">Login</button>
+            <div class="forgot_password_button">
+                <button>Forgot Password</button>
+            </div>
+            <div class="signup_button">
+                <button>Sign Up</button>
+            </div>
         </div>
     </form>
-    <div class="forgot_password_button">
-        <button>Forgot Password</button>
-    </div>
-    <div class="signup_button">
-        <button>Sign Up</button>
-    </div>
+
 </div>
 
 <div *ngIf="page === 'checkout'" class="checkout_container_form">
     <div class="checkout_form">
         <div class="checkout_form_close">
-            <button (click)="this.dialogRef.close()">X</button>
+            <button class="checkout-close" (click)="this.dialogRef.close()">X</button>
         </div>
         <div class="left_side_checkout_login_form">
             <div class="username_field">
@@ -42,9 +45,9 @@
                 <input type="password" class="login_fields" placeholder="Password" />
             </div>
             <div class="login_button">
-                <button (click)="signIn()">Log In</button>
+                <button class="checkout-login-button" (click)="signIn()">Log In</button>
             </div>
-            <h1 class="coinbase_link">Scan QR Code to Sign in to your <a href="https://www.coinbase.com/wallet"
+            <h1 class="coinbase_link"> Sign into your <a href="https://www.coinbase.com/wallet"
                     class="">Coinbase
                     Wallet</a>
             </h1>
@@ -56,14 +59,14 @@
 
 <div *ngIf="page === 'order_detail'" class="order_detail_form">
     <div class="order_detail_form">
-        <h1>Welcome Caylee,</h1>
-            <div class="bitcoin_balance">
-                <h2>Your have a balance of: 5 BTC</h2>
-                <h2>Your purchase amount is: 2 BTC</h2>
+        <p class="order-detail-welcome">Welcome Caylee,<p>
+            <div class="order-detail-balance">
+                <p class="balance">Balance: 5 BTC</p>
+                <p class="balance">Purchase Total: 2 BTC</p>
             </div>
-            <div class="checkout_form_close">
-            <button (click)="this.dialogRef.close()">Cancel Purchase</button>
-            <button (click)="CloseModal()">Complete Purchase</button> 
+            <div class="buttons">
+            <button class="order-detail-cancel" (click)="this.dialogRef.close()">Cancel</button>
+            <button class="order-detail-complete" (click)="CloseModal()">Purchase</button> 
             </div>
     </div>
 </div>
