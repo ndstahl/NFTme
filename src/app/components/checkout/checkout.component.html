@@ -1,7 +1,7 @@
 <app-navbar></app-navbar>
 <h1 class="cart-Title">Shopping Cart</h1>
-<input type="button" value="Back to Shop" onclick="history.back()" />
-<div class="cards_container_all">
+<input type="button" class="backButton"value="Back to Shop" onclick="history.back()" />
+<div class="cards_container">
   <div class="matt-card-container2">
     <mat-card class="example-card2">
       <mat-card-header>
@@ -10,7 +10,8 @@
 
       <mat-card-content>
         <div *ngIf="nfts.length === 0">Your cart is Empty</div>
-        <div class="product-card" *ngFor="let nft of nfts">
+        <div class="product-card" *ngFor="let nft of nfts; index as i">
+          <button (click)="removeFromCart(i)">Remove</button>
           <div class="card">
             <div class="img-box">
               <img
@@ -22,22 +23,20 @@
             </div>
             <div class="detail">
               <h3 class="product-name">{{ nft.title }}</h3>
-              <h4>{{ nft.category }}</h4>
               <p>{{ nft.info }}</p>
               <div class="wrapper">
                 <div class="price">
-                  $ <span id="price">{{ nft.price }}</span>
+                  <span id="price">{{ nft.price }}</span>
                 </div>
               </div>
             </div>
-            <button class="product-close-btn"></button>
           </div>
         </div>
 
         <div *ngIf="nfts.length > 0" class="wrapper">
           <div class="amount">
             <div class="total">
-              <span>Total</span> <span><span id="1Bitcoin"></span></span>
+              <span>Total:</span> <span>3BTC</span>
             </div>
           </div>
         </div>
@@ -96,4 +95,3 @@
   </div>
 </div>
 <app-footer></app-footer>
-
