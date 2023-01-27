@@ -57,9 +57,10 @@ button {
   margin-left: 1em;
   margin-right: 1em;
 
-  &_close {
-    margin-bottom: 237px;
-  }
+    &_close { 
+        margin-bottom: 237px;
+        margin-top: 5em;
+    }
 }
 
 .left_side_checkout_login_form {
