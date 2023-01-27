@@ -33,5 +33,6 @@ export class CheckoutComponent {
 
   removeFromCart(idx: number) {
     this.nfts.splice(idx, 1);
+    this.nftMeService.$checkoutData.next(this.nfts.length);
   }
 }
