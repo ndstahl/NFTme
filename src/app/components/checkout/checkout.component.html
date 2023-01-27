@@ -1,6 +1,16 @@
 <app-navbar></app-navbar>
 <h1 class="cart-Title">Shopping Cart</h1>
-<input type="button" class="backButton"value="Back to Shop" onclick="history.back()" />
+<div class="container">
+  <div class="backShop_Button">
+    <button class="btn" onclick="history.back()">
+      <svg width="180px" height="60px" viewBox="0 0 180 60" class="border">
+        <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+        <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+      </svg>
+      <span>Back to Shop</span>
+    </button>
+  </div>
+</div>
 <div class="cards_container">
   <div class="matt-card-container2">
     <mat-card class="example-card2">
@@ -11,7 +21,7 @@
       <mat-card-content>
         <div *ngIf="nfts.length === 0">Your cart is Empty</div>
         <div class="product-card" *ngFor="let nft of nfts; index as i">
-          <button (click)="removeFromCart(i)">Remove</button>
+          <button class="remove_btn"(click)="removeFromCart(i)">X</button>
           <div class="card">
             <div class="img-box">
               <img
@@ -35,8 +45,8 @@
 
         <div *ngIf="nfts.length > 0" class="wrapper">
           <div class="amount">
-            <div class="total">
-              <span>Total:</span> <span>3BTC</span>
+            <div class="totalAmount">
+              <span class="order_Total">Order Total: </span> <span>3 BTC</span>
             </div>
           </div>
         </div>
@@ -45,10 +55,6 @@
   </div>
   <div class="matt-card-container">
     <mat-card class="payment-card">
-      <mat-card-header>
-        <mat-card-title>Payment Details</mat-card-title>
-        <mat-card-subtitle>Payment Method</mat-card-subtitle>
-      </mat-card-header>
       <mat-card-actions class="mdc-card_actions">
         <h2>Sign Into Your Crypto Wallet</h2>
         <button (click)="openModal()" class="coinbase_Logo">
