@@ -38,6 +38,9 @@ img {
   font-size: 1em;
   letter-spacing: 0.05em;
   z-index: 10;
+  border: 1px solid white;
+  border-radius: 0.5em;
+  color: white;
 }
 
 button {
@@ -45,6 +48,8 @@ button {
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  background-color: rgb(100, 175, 100);
+  border-radius: .5em;
 }
 
 .checkout_form {
@@ -88,38 +93,38 @@ h1.coinbase_link {
 
 ///
 
-.login_container_form::before {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50;
-  width: 35em;
-  height: 40em;
-  background: linear-gradient(0deg, transparent, #44f3ff11, #45f3ff1d);
-  transform-origin: bottom right;
-  animation: animate 6s linear infinite;
-}
+// .login_container_form::before {
+//   content: "";
+//   position: absolute;
+//   top: -50%;
+//   left: -50;
+//   width: 35em;
+//   height: 40em;
+//   background: linear-gradient(0deg, transparent, #44f3ff11, #45f3ff1d);
+//   transform-origin: bottom right;
+//   animation: animate 6s linear infinite;
+// }
 
-.login_container_form::after {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -50;
-  width: 30em;
-  height: 40em;
-  background: linear-gradient(0deg, transparent, #45f3ff1a, #45f3ff38);
-  transform-origin: bottom right;
-  animation: animate 6s linear infinite;
-  animation-delay: -3s;
-}
-@keyframes animate {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
+// .login_container_form::after {
+//   content: "";
+//   position: absolute;
+//   top: -50%;
+//   left: -50;
+//   width: 30em;
+//   height: 40em;
+//   background: linear-gradient(0deg, transparent, #45f3ff1a, #45f3ff38);
+//   transform-origin: bottom right;
+//   animation: animate 6s linear infinite;
+//   animation-delay: -3s;
+// }
+// @keyframes animate {
+//   0% {
+//     transform: rotate(0deg);
+//   }
+//   100% {
+//     transform: rotate(360deg);
+//   }
+// }
 .form {
   position: absolute;
   inset: 2px;
@@ -129,6 +134,8 @@ h1.coinbase_link {
   padding: 50px 40px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 h1 {
   color: #45f3ff;
@@ -207,5 +214,24 @@ button:hover {
 
 button {
   height: 2em;
-  width: 7em;
+  width: 10em;
+}
+
+// .mdc-dialog__container {
+//   height: 70em;
+//   width: 70em;
+// }
+
+.login_button {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+form {
+  gap: 1em;
+  display: flex;
+  flex-direction: column;
 }
