@@ -1,0 +1,26 @@
+.about-container {
+    margin-top: 10px;
+    color:black;
+    max-width: 50%;
+    max-height: 50%;
+    padding-left: 30em;
+
+    h4 {
+        font-size: 25px;
+    }
+
+    mat-card {
+        margin-top: 25px;
+        display: flex;
+        flex-direction: column;
+    }
+    mat-card-title {
+        font-size: 30px;
+        color: black;
+    }
+    p {
+        color:black;
+        font-size: 20px;
+    }
+
+}
