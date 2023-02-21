@@ -23,6 +23,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { AboutComponent } from './components/about/about.component';
 import { ContactComponent } from './components/contact/contact.component';
 import {MatListModule} from '@angular/material/list';
+import { ParticlesModule } from "ng-particles";
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import {MatListModule} from '@angular/material/list';
     MatCardModule,
     MatSelectModule,
     ReactiveFormsModule,
-    MatListModule
+    MatListModule,
+    ParticlesModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

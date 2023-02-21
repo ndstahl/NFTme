@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import * as JSConfetti from 'js-confetti';
 
 import { ConfirmationComponent } from './confirmation.component';
 

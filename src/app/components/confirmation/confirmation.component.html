@@ -5,4 +5,10 @@
         <h1>Transaction ID: 125649223</h1>
         <img src="../../../assets/images/nftlogo2.png" alt="" />
     </div>
+    <ng-particles
+    [id]="id"
+    [options]="particlesOptions"
+    [particlesInit]="particlesInit"
+    (particlesLoaded)="particlesLoaded($event)"
+></ng-particles>
 </div>
